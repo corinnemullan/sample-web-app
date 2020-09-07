@@ -1,2 +1,3 @@
-/test.db
-/.ideas/
+test.db
+.DS_Store
+.ideas/

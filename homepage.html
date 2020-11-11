@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-<title>My Home Page Title</title>
-</head>
-
-<body>
-<h1>
-    <p>The message of the day is:</p>
-</h1>
-<p>{{.Message}}</p>
-<p>- {{.Person}}</p>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Home Page Title</title>
+    </head>
+    <body>
+    {{if not .Message}}
+        <p>Add some quotes to see this app work.</p>
+    {{else}}
+        <h1>The message of the moment is:</h1>
+        <p>{{.Message}}</p>
+        <p>- {{.Person}}</p>
+        <a href="/">I need more inspiration, show me another random quote</a><br>
+        <a href="/delete/{{.Id}}">I don't like this one, let's delete it</a><br>
+    {{end}}
+    <a href="/add/">Add a Quote</a>
+    </body>
 </html>
